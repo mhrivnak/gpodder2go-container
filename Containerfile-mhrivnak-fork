@@ -2,13 +2,13 @@ FROM registry.access.redhat.com/ubi9/go-toolset:latest as builder
 
 RUN mkdir $HOME/build
 
-COPY bcd3409.zip $HOME/build/
+COPY 4ce8db2.zip $HOME/build/
 
 WORKDIR $HOME/build
 
-RUN unzip bcd3409.zip
+RUN unzip 4ce8db2.zip
 
-WORKDIR gpodder2go-bcd34094d962c6252f99106a9aaff3dc508daece
+WORKDIR gpodder2go-4ce8db298df7c84f229608d17b51618cf4da3d65
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o $HOME/gpodder2go
 
