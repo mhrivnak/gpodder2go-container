@@ -10,8 +10,6 @@ RUN tar -xvzf v0.2.0.tar.gz
 
 WORKDIR gpodder2go-0.2.0
 
-RUN ls -lh
-
 RUN CGO_ENABLED=0 GOOS=linux go build -o $HOME/gpodder2go
 
 FROM registry.access.redhat.com/ubi9/ubi-micro:latest
